@@ -1,0 +1,153 @@
+::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* navbar */
+/* Custom CSS */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.menu {
+  color: #333;
+}
+
+.input-item {
+  cursor: pointer;
+}
+
+/* Hide upcoming-cards and today-cards by default */
+#coming-cards,
+#today-cards,
+#calendar-cards {
+  display: none;
+}
+
+/* Active state for list-group-item */
+.list-group-item.active {
+  background-color: #5f5a5a;
+  border: 1px solid #5f5a5a;
+}
+
+/* navbar */
+
+/* calender */
+.calendar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.month {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.weekdays div {
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.day {
+  width: calc(38% / 7);
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.today {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.event {
+  position: relative;
+  cursor: pointer;
+}
+
+.event:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #dc3545;
+  border-radius: 50%;
+}
+
+.event:hover:after {
+  width: 10px;
+  height: 10px;
+}
+
+/* sticky wall */
+#sticky-wall {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+}
+
+.sticky-note {
+  background-color: #fffae3;
+  border: 2px solid #ffd700;
+  width: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.sticky-note .card-body {
+  padding: 1rem;
+}
+
+.sticky-note .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sticky-note .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.day.today {
+  background-color: #ffeb3b; /* Warna latar belakang untuk hari ini */
+  border-radius: 50%;
+  font-weight: bold;
+}
